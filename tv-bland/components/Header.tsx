@@ -1,10 +1,14 @@
 import React from 'react'
 import Title from './Title'
+import Subheader from './Subheader'
+import DateAndTime from './DateAndTime'
 
 function Header() {
   return (
-    <div className="w-screen h-4/6">
+    <div className="h-96 bg-black px-36 py-24">
+        <DateAndTime/>
         <Title/>
+        <Subheader/>
     </div>
   )
 }

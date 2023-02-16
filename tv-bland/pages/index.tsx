@@ -1,9 +1,12 @@
+import Header from '@/components/Header'
+import ShowDisplay from '@/components/ShowDisplay'
 import React from 'react'
 
 export default function Home() {
   return (
-    <div>
-      <h1>hello hello</h1>
+    <div className='h-full w-full'>
+      <Header/>
+      <ShowDisplay/>
     </div>
   )
 }
