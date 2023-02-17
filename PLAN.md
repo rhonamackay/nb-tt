@@ -12,3 +12,5 @@ Nice to have:
 - performance optimisation
 - responsive images
 - unit tests for components
+- select different 'channels' for different countries
+- remove duplicates?

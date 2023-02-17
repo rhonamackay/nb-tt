@@ -1,11 +1,27 @@
 import React from 'react'
+import Image from 'next/image'
 
-function Card() {
+type CardPropsType = {
+  title: string,
+  img: string,
+  rating: any
+}
+
+
+function Card({title, img, rating}: CardPropsType) {
   return (
     <div>
-        <div className="bg-green h-48 w-32">img placeholder</div>
+        {img === 'placeholder' ? <div className="bg-green h-48 w-32 text-black">img placeholder</div> 
+          :
+        <Image
+          src={img}
+          alt={title}
+          width={128}
+          height={192}
+          className="h-48 w-32"/>
+        }
         <span>*****</span>
-        <p className="text-cyan">Show title</p>
+        <p className="text-cyan">{title}</p>
     </div>
   )
 }
