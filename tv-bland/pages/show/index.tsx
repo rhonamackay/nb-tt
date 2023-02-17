@@ -2,6 +2,9 @@ import InfoTable from '@/components/InfoTable'
 import StarringTable from '@/components/StarringTable'
 import React from 'react'
 
+
+
+
 function id() {
   return (
     <div className="px-36">

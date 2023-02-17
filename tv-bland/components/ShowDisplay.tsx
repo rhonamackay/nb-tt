@@ -11,7 +11,7 @@ function ShowDisplay() {
   //Fetches TV schedule data from API
   useEffect(() => {
     async function getSchedule() {
-      const response = await fetch('https://api.tvmaze.com/schedule?country=US')
+      const response = await fetch('https://api.tvmaze.com/schedule')
       const data = await response.json()
       const justShowData = data.map((ep: EpisodeType) => ep.show)
       setScheduledShows(justShowData)
@@ -51,9 +51,9 @@ function ShowDisplay() {
         <div className="flex flex-row justify-center gap-3 underline text-xl">
           {pagesArr.length > 0 ? pagesArr.map((page) => {
             if(page===currentPage) {
-              return <h2 className="hover:text-yellow text-green" onClick={handlePageChange}>{page}</h2>
+              return <h2 key={page} className="hover:text-yellow text-green" onClick={handlePageChange}>{page}</h2>
             } else {
-              return <h2 className="hover:text-yellow" onClick={handlePageChange}>{page}</h2>
+              return <h2 key={page} className="hover:text-yellow" onClick={handlePageChange}>{page}</h2>
             }
             })
           : null}
