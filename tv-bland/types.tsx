@@ -47,7 +47,7 @@ export interface ShowType {
   webChannel: any
   dvdCountry: any
   externals: Externals
-  image?: Image2
+  image?: Image
   summary: string
   updated: number
   _links: Links
@@ -81,11 +81,6 @@ export interface Externals {
   imdb?: string
 }
 
-export interface Image2 {
-  medium: string
-  original: string
-}
-
 export interface Links {
   self: Self
   previousepisode: Previousepisode
@@ -105,14 +100,87 @@ export interface Nextepisode {
 }
 
 export interface Links2 {
-  self: Self2
-  show: Show2
+  self: Self
+  show: Show
 }
 
-export interface Self2 {
+export interface Show {
   href: string
 }
 
-export interface Show2 {
-  href: string
+export interface individualShowDataType {
+  id: number
+  url: string
+  name: string
+  type: string
+  language: string
+  genres: any[]
+  status: string
+  runtime: number
+  averageRuntime: number
+  premiered: string
+  ended: any
+  officialSite: string
+  schedule: Schedule
+  rating: Rating
+  weight: number
+  network: Network
+  webChannel: any
+  dvdCountry: any
+  externals: Externals
+  image: Image
+  summary: string
+  updated: number
+  _links: Links
+  _embedded: Embedded
 }
+
+export interface Schedule {
+  time: string
+  days: string[]
+}
+
+
+export interface Country {
+  name: string
+  code: string
+  timezone: string
+}
+
+export interface Image {
+  medium: string
+  original: string
+}
+
+export interface Embedded {
+  cast: Cast[]
+}
+
+export interface Cast {
+  person: Person
+  character: Character
+  self: boolean
+  voice: boolean
+}
+
+export interface Person {
+  id: number
+  url: string
+  name: string
+  country: Country
+  birthday: string
+  deathday: any
+  gender: string
+  image: Image
+  updated: number
+  _links: Links
+}
+
+export interface Character {
+  id: number
+  url: string
+  name: string
+  image: any
+  _links: Links
+}
+

@@ -8,7 +8,7 @@ function Header() {
   const router = useRouter()
 
   return (
-    <div className="h-96 bg-black px-36 py-24">
+    <div className="h-96 bg-black px-36 py-20">
         <DateAndTime/>
         <Title/>
        {router.asPath === '/' ? <Subheader/> : null}
