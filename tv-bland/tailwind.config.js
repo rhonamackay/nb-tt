@@ -10,7 +10,8 @@ module.exports = {
   theme: {
       extend: {
         spacing: {
-          'neg7rem': '-7rem'
+          'neg7rem': '-7rem',
+          'neg20rem': '-20rem'
         },
         fontFamily: {
           sans: ['VT323', ...defaultTheme.fontFamily.sans]
