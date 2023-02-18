@@ -51,31 +51,31 @@ function page({ show }: showPagePropsType) {
   })
 
   return (
-    <>
-    <ShowPgHeader/>
-    <div className="px-36">
-      <div className="mt-neg20rem text-green flex flex-row gap-5 pb-3.5">
-          {img ? <Image
-            src={img.medium}
-            alt={title}
-            width={128}
-            height={192}
-            className="h-48 w-32 border-4 border-green"/> : <div className="bg-green h-48 w-32 text-black p-3">No image found</div>}
-        <div className='flex flex-col'>
-          {rating ? <div>
-            <span className="text-magenta text-l">{"*".repeat(roundRating)}</span>
-            <span className="text-white text-l">{"*".repeat(5 - roundRating)}</span> {pointRating}/5
-          </div> : <span>No rating available</span> }
-          <h2 className="text-3xl text-cyan">{title}</h2>
-          <p className="text-lg">{summary}</p>
+    <div className="min-h-screen w-full">
+      <ShowPgHeader/>
+        <div className="md:mt-neg11rem mt-neg32rem text-green sm:px-36 md:gap-5 gap-8 pb-3.5 flex flex-col flex-wrap content-center w-full ">
+          <div className="md:flex md:flex-row max-w-screen-lg md:w-full w-screen gap-10 md:bg-transparent bg-black md:pb-0 pb-9">
+            {img ? <Image
+              src={img.medium}
+              alt={title}
+              width={128}
+              height={192}
+              className="h-48 w-32 border-4 border-green mx-5 md:mx-0"/> : <div className="bg-green h-48 w-32 text-black p-3 px-5 md:px-0">No image found</div>}
+            <div className='flex flex-col'>
+              {rating ? <div className="px-5 md:px-0">
+                <span className="text-magenta text-l">{"*".repeat(roundRating)}</span>
+                <span className="text-white text-l">{"*".repeat(5 - roundRating)}</span> {pointRating}/5
+              </div> : <span className="px-5 md:px-0">No rating available</span> }
+              <h2 className="text-3xl text-cyan px-5 md:px-0">{title}</h2>
+              <p className="text-lg px-5 md:px-0">{summary}</p>
+            </div>
+          </div>
+          <div className="md:w-full w-11/12 md:flex md:flex-row md:justify-between max-w-screen-lg md:px-0 px-5 flex flex-col gap-5 content-center md:py-0 py-8">
+            <InfoTable info={info}/>
+            <StarringTable cast={cast}/> 
+          </div>  
         </div>
-      </div>
-      <div className="w-full flex flex-row justify-between">
-        <InfoTable info={info}/>
-        <StarringTable cast={cast}/> 
-      </div>  
     </div>
-    </>
   )
 }
 

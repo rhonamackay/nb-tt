@@ -11,7 +11,8 @@ module.exports = {
       extend: {
         spacing: {
           'neg7rem': '-7rem',
-          'neg20rem': '-20rem'
+          'neg11rem': '-11rem',
+          'neg32rem': '-32rem'
         },
         fontFamily: {
           sans: ['VT323', ...defaultTheme.fontFamily.sans]

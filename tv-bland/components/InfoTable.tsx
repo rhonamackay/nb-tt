@@ -12,27 +12,27 @@ function InfoTable({ info }: infoTablePropsType) {
   const genres = info.genres
 
   return (
-      <table className="table-fixed text-white w-2/5">
+      <table className="md:table-fixed table-auto text-white md:w-2/5 ">
           <thead className="text-2xl">
               <tr>
-                <th className="w-1/3">Show info</th>
-                <th className="w-2/3">{'   '}</th>
+                <th className="md:w-1/3">Show info</th>
+                <th className="md:w-2/3">{'   '}</th>
               </tr>
           </thead>
           <tbody className="bg-cyan text-black">
-            <tr className='border border-blue odd:bg-blue odd:text-white' >
+            <tr className='odd:bg-blue odd:text-white' >
               <td>Shown on</td>
               {network ? <td >{network.name}</td> :  <td>unknown</td>}
             </tr>
-            <tr className='border border-blue odd:bg-blue odd:text-white'>
+            <tr className='odd:bg-blue odd:text-white'>
               <td>Schedule</td>
               <td>{schedule.days.join(', ')}</td>
             </tr>
-            <tr className='border border-blue odd:bg-blue odd:text-white'> 
+            <tr className='odd:bg-blue odd:text-white'> 
               <td>Status</td>
               <td>{status}</td>
             </tr>
-            <tr className='border border-blue odd:bg-blue odd:text-white'>
+            <tr className='odd:bg-blue odd:text-white'>
               <td>Genre</td>
               <td>{genres}</td>
             </tr>
