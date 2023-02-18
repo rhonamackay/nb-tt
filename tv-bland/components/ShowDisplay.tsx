@@ -11,8 +11,9 @@ function ShowDisplay() {
   
   useEffect(() => {
     async function getSchedule() {
+      const countryPrefix = '?country=GB'
       //Fetches TV schedule data from API
-      const response = await fetch('https://api.tvmaze.com/schedule?country=GB')
+      const response = await fetch('https://api.tvmaze.com/schedule')
       const data = await response.json()
 
       //removes unecessary episode info and duplicate shows
@@ -54,9 +55,9 @@ function ShowDisplay() {
  }
 
   return (
-    <div className='h-5/6 px-36 mt-neg7rem'>
-        <h2 className='text-magenta text-2xl mb-2.5'>Shows coming up</h2>
-        <div className="w-full flex flex-row flex-wrap gap-3 items-stretch justify-evenly mb-5">
+    <div className='h-5/6 px-36 mt-neg7rem flex flex-col flex-wrap content-center w-full'>
+        <h2 className='text-magenta text-2xl mb-2.5 px-36'>Shows coming up</h2>
+        <div className="w-full flex flex-row flex-wrap gap-3 items-stretch justify-evenly mb-5 px-36 max-w-screen-xl">
             {displayedShows.length > 0 ? displayedShows.map((show, index) => <Card key={index} id={show.id} title={show.name} img={show.image ? show.image.medium : 'placeholder'} rating={show.rating}/>) : <h2>Sorry, I couldn&apos;t find any shows for you</h2>}
         </div>
         <div className="flex flex-row justify-center gap-3 underline text-xl">

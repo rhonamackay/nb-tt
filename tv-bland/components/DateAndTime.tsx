@@ -11,7 +11,7 @@ function DateAndTime() {
     });
 
   return (
-    <p className='flex flex-row justify-end gap-2'>
+    <p className='flex flex-row justify-end gap-2 max-w-screen-xl'>
         {date ? <>
                 <span className="text-green">{date.toLocaleDateString(undefined, {weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' })}</span> <span className="text-yellow">{date.toLocaleTimeString()}</span> 
             </>

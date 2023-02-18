@@ -22,7 +22,7 @@ function InfoTable({ info }: infoTablePropsType) {
           <tbody className="bg-cyan text-black">
             <tr className='border border-blue odd:bg-blue odd:text-white' >
               <td>Shown on</td>
-              {network ? <td >{network.name}</td> :  <td className='text-black'>unknown</td>}
+              {network ? <td >{network.name}</td> :  <td>unknown</td>}
             </tr>
             <tr className='border border-blue odd:bg-blue odd:text-white'>
               <td>Schedule</td>
