@@ -4,6 +4,7 @@ import { individualShowDataType } from '@/types'
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import ShowPgHeader from '@/components/ShowPgHeader'
+import ShowProfile from '@/components/ShowProfile'
 
 type showPagePropsType = {
   show: individualShowDataType
@@ -38,6 +39,14 @@ function page({ show }: showPagePropsType) {
   const cast = show._embedded.cast
   const [roundRating, setRoundRating] = useState(0)
   const [pointRating, setPointRating] = useState(0)
+  const showProfileInfo = {
+    img: img,
+    title: title,
+    summary: summary,
+    rating: rating,
+    roundRating: roundRating,
+    pointRating: pointRating
+  }
   
   useEffect(() => {
     //converts rating to nuber /5 and provides round number for * display
@@ -55,20 +64,7 @@ function page({ show }: showPagePropsType) {
       <ShowPgHeader/>
         <div className="md:mt-neg11rem mt-neg32rem text-green sm:px-36 md:gap-5 gap-8 pb-3.5 flex flex-col flex-wrap content-center w-full ">
           <div className="md:flex md:flex-row max-w-screen-lg md:w-full w-screen gap-10 md:bg-transparent bg-black md:pb-0 pb-9">
-            {img ? <Image
-              src={img.medium}
-              alt={title}
-              width={128}
-              height={192}
-              className="h-48 w-32 border-4 border-green mx-5 md:mx-0"/> : <div className="bg-green h-48 w-32 text-black p-3 px-5 md:px-0">No image found</div>}
-            <div className='flex flex-col'>
-              {rating ? <div className="px-5 md:px-0">
-                <span className="text-magenta text-l">{"*".repeat(roundRating)}</span>
-                <span className="text-white text-l">{"*".repeat(5 - roundRating)}</span> {pointRating}/5
-              </div> : <span className="px-5 md:px-0">No rating available</span> }
-              <h2 className="text-3xl text-cyan px-5 md:px-0">{title}</h2>
-              <p className="text-lg px-5 md:px-0">{summary}</p>
-            </div>
+            <ShowProfile info={showProfileInfo} />
           </div>
           <div className="md:w-full w-11/12 md:flex md:flex-row md:justify-between max-w-screen-lg md:px-0 px-5 flex flex-col gap-5 content-center md:py-0 py-8">
             <InfoTable info={info}/>
