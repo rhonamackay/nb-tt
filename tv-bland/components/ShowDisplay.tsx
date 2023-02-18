@@ -1,20 +1,31 @@
 import React, { useEffect, useState } from 'react'
-import { EpisodeType } from '@/types'
+import { EpisodeType, ShowType } from '@/types'
 import Card from './Card'
 
 function ShowDisplay() {
-  const [scheduledShows, setScheduledShows] = useState<EpisodeType[]>([])
-  const [displayedShows, setDisplayedShows] = useState<EpisodeType[]>([])
+  const [scheduledShows, setScheduledShows] = useState<ShowType[]>([])
+  const [displayedShows, setDisplayedShows] = useState<ShowType[]>([])
   const [pagesArr, setpagesArr] = useState<number[]>([])
   const [currentPage, setCurrentPage] = useState(1)
 
-  //Fetches TV schedule data from API
+  
   useEffect(() => {
     async function getSchedule() {
-      const response = await fetch('https://api.tvmaze.com/schedule')
+      //Fetches TV schedule data from API
+      const response = await fetch('https://api.tvmaze.com/schedule?country=GB')
       const data = await response.json()
+
+      //removes unecessary episode info and duplicate shows
       const justShowData = data.map((ep: EpisodeType) => ep.show)
-      setScheduledShows(justShowData)
+      const showDataNoDups: ShowType[] = []
+      const showIDs: number[] = []
+      justShowData.forEach((show: ShowType) => {
+        if (!showIDs.includes(show.id)) {
+          showIDs.push(show.id)
+          showDataNoDups.push(show)
+        }
+      })
+      setScheduledShows(showDataNoDups)
     }
     getSchedule()
   }, [])

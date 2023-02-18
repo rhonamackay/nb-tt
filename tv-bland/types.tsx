@@ -184,3 +184,9 @@ export interface Character {
   _links: Links
 }
 
+export interface showInfoType {
+  network: Network,
+  schedule: Schedule,
+  status: string,
+  genres: string
+}

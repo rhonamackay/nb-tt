@@ -6,6 +6,7 @@ MVP:
 - Cypress for e2e testing
 - deploy on vercel
 - pagination of shows DONE
+- remove duplicates? DONE
 
 Nice to have: 
 - graphql wrapper for rest api
@@ -13,4 +14,4 @@ Nice to have:
 - responsive images
 - unit tests for components
 - select different 'channels' for different countries
-- remove duplicates?
+

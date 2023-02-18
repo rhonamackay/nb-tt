@@ -12,10 +12,12 @@ type CardPropsType = {
 
 function Card({title, img, rating, id}: CardPropsType) {
   const [convertedRating, setConvertedRating] = useState<number | null>(null)
+
   useEffect(() => {
+    //converts each shows rating from number /10 to number /5 and rounds down
     function convertRating() {
       if (rating.average !== null) {
-        setConvertedRating(Math.floor(Number(rating.average) / 2))
+        setConvertedRating(Math.ceil(Number(rating.average) / 2))
       }
     }
     convertRating()
@@ -27,7 +29,7 @@ function Card({title, img, rating, id}: CardPropsType) {
           pathname: '/show',
           query: {id:String(id)}
         }}>
-          {img === 'placeholder' ? <div className="bg-green h-48 w-32 text-black">img placeholder</div> 
+          {img === 'placeholder' ? <div className="bg-green h-48 w-32 text-black p-3">No image found</div> 
             :
           <Image
             src={img}
