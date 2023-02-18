@@ -1,15 +1,12 @@
 import React from 'react'
 import Title from './Title'
 import Subheader from './Subheader'
-import { useRouter } from 'next/router'
 
 function Header() {
-  const router = useRouter()
-
   return (
-    <div className="h-96 bg-black px-36 py-20 flex flex-col flex-wrap content-center">
+    <div className="md:h-96 bg-black md:px-36 md:py-20 px-10 pt-10 pb-16 mb-5 flex flex-col flex-wrap content-center">
         <Title/>
-       {router.asPath === '/' ? <Subheader/> : null}
+        <Subheader/>
     </div>
   )
 }

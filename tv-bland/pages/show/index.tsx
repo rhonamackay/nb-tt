@@ -3,6 +3,7 @@ import StarringTable from '@/components/StarringTable'
 import { individualShowDataType } from '@/types'
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
+import ShowPgHeader from '@/components/ShowPgHeader'
 
 type showPagePropsType = {
   show: individualShowDataType
@@ -50,6 +51,8 @@ function page({ show }: showPagePropsType) {
   })
 
   return (
+    <>
+    <ShowPgHeader/>
     <div className="px-36">
       <div className="mt-neg20rem text-green flex flex-row gap-5 pb-3.5">
           {img ? <Image
@@ -72,6 +75,7 @@ function page({ show }: showPagePropsType) {
         <StarringTable cast={cast}/> 
       </div>  
     </div>
+    </>
   )
 }
 

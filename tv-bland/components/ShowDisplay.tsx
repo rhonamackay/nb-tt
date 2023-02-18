@@ -55,9 +55,9 @@ function ShowDisplay() {
  }
 
   return (
-    <div className='h-5/6 px-36 mt-neg7rem flex flex-col flex-wrap content-center w-full'>
-        <h2 className='text-magenta text-2xl mb-2.5 px-36'>Shows coming up</h2>
-        <div className="w-full flex flex-row flex-wrap gap-3 items-stretch justify-evenly mb-5 px-36 max-w-screen-xl">
+    <div className='h-5/6 sm:px-36 md:mt-neg7rem flex flex-col flex-wrap content-center w-full'>
+        <h2 className='text-magenta text-2xl mb-2.5 px-5 max-w-screen-lg'>Shows coming up</h2>
+        <div className="w-full flex flex-row flex-wrap gap-3 items-stretch justify-evenly mb-5 px-5 max-w-screen-lg">
             {displayedShows.length > 0 ? displayedShows.map((show, index) => <Card key={index} id={show.id} title={show.name} img={show.image ? show.image.medium : 'placeholder'} rating={show.rating}/>) : <h2>Sorry, I couldn&apos;t find any shows for you</h2>}
         </div>
         <div className="flex flex-row justify-center gap-3 underline text-xl">
