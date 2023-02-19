@@ -19,7 +19,7 @@ function InfoTable({ info }: infoTablePropsType) {
                 <th className="md:w-2/3">{'   '}</th>
               </tr>
           </thead>
-          <tbody className="bg-cyan text-black">
+          <tbody data-cy="info-table-body" className="bg-cyan text-black">
             <tr className='odd:bg-blue odd:text-white' >
               <td>Shown on</td>
               {network ? <td >{network.name}</td> :  <td>unknown</td>}

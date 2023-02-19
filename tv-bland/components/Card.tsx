@@ -24,7 +24,7 @@ function Card({title, img, rating, id}: CardPropsType) {
   }, [])
 
   return (
-    <div>
+    <div data-cy="show-card">
         <Link href={{
           pathname: '/show',
           query: {id:String(id)}

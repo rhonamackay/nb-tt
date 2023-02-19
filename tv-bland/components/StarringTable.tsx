@@ -6,7 +6,7 @@ type starringPropsType = {
 }
 
 function StarringTable( { cast }: starringPropsType) {
-    const mainCast = cast.slice(0, 4)
+    const mainCast= cast.slice(0, 4)
 
   return (
         <table className="md:table-fixed table-auto text-white md:w-2/5 md:pt-0 pt-5">
@@ -20,11 +20,11 @@ function StarringTable( { cast }: starringPropsType) {
                     </th>
                 </tr>
             </thead>
-            <tbody className="bg-cyan text-black">
+            <tbody data-cy="starring-table-body" className="bg-cyan text-black">
                 {mainCast.map((person, index) => {
-                    return <tr key={index} className=' even:bg-blue even:text-white'>
-                        <td >{person.person.name}</td>
-                        <td >{person.character.name}</td>
+                    return <tr key={index} className='even:bg-blue even:text-white'>
+                    <td >{person.person.name}</td>
+                    <td >{person.character.name}</td>
                     </tr>
                 })}
             </tbody>

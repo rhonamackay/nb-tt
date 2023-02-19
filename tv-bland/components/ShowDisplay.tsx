@@ -63,9 +63,9 @@ function ShowDisplay() {
         <div className="flex flex-row justify-center gap-3 underline text-xl">
           {pagesArr.length > 0 ? pagesArr.map((page) => {
             if(page===currentPage) {
-              return <h2 key={page} className="hover:text-yellow text-green" onClick={handlePageChange}>{page}</h2>
+              return <h2 data-cy="page-num" key={page} className="hover:text-yellow text-green" onClick={handlePageChange}>{page}</h2>
             } else {
-              return <h2 key={page} className="hover:text-yellow" onClick={handlePageChange}>{page}</h2>
+              return <h2 data-cy="page-num" key={page} className="hover:text-yellow" onClick={handlePageChange}>{page}</h2>
             }
             })
           : null}
