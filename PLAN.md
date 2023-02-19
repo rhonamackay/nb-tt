@@ -11,9 +11,12 @@ MVP:
 <a target="_blank" href="https://icons8.com/icon/AZwb90aYpYkE/old-tv">Old TV</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 
 Bugs to fix: 
-- implement feature: select different 'channels' for different countries
 - fix height bug in starring table where hieght is too much if only one star
 - if there is no info on case display that in starring table
+
+Extra features: 
+- select different 'channels' for different countries
+- loading spinner on first page load
 
 Nice to have: 
 - graphql wrapper for rest api
