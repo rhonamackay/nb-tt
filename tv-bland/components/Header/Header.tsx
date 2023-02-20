@@ -1,6 +1,6 @@
 import React from 'react'
-import Title from './Title'
-import Subheader from './Subheader'
+import Title from '../Title/Title'
+import Subheader from '../SubHeader/Subheader'
 
 function Header() {
   return (

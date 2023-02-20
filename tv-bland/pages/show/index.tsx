@@ -1,9 +1,9 @@
-import InfoTable from '@/components/InfoTable'
-import StarringTable from '@/components/StarringTable'
+import InfoTable from '@/components/InfoTable/InfoTable'
+import StarringTable from '@/components/StarringTable/StarringTable'
 import { individualShowDataType } from '@/types'
 import React, { useEffect, useState } from 'react'
-import ShowPgHeader from '@/components/ShowPgHeader'
-import ShowProfile from '@/components/ShowProfile'
+import ShowPgHeader from '@/components/ShowPgHeader/ShowPgHeader'
+import ShowProfile from '@/components/ShowProfile/ShowProfile'
 
 type showPagePropsType = {
   show: individualShowDataType

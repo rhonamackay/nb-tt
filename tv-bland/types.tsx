@@ -87,6 +87,10 @@ export interface Links {
   nextepisode?: Nextepisode
 }
 
+export interface castLinks {
+  self: Self
+}
+
 export interface Self {
   href: string
 }
@@ -173,7 +177,7 @@ export interface Person {
   gender: string
   image: Image
   updated: number
-  _links: Links
+  _links: castLinks
 }
 
 export interface Character {
@@ -181,7 +185,7 @@ export interface Character {
   url: string
   name: string
   image: any
-  _links: Links
+  _links: castLinks
 }
 
 export interface showInfoType {

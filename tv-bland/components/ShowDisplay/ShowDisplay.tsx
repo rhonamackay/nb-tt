@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { EpisodeType, ShowType } from '@/types'
-import Card from './Card'
+import Card from '../Card/Card'
 
 function ShowDisplay() {
   const [scheduledShows, setScheduledShows] = useState<ShowType[]>([])
@@ -53,6 +53,7 @@ function ShowDisplay() {
     const newShowArray = scheduledShows.slice(newPageNumber*20, newPageNumber*20+20)
     setDisplayedShows(newShowArray)
  }
+
 
   return (
     <div className='h-5/6 sm:px-36 md:mt-neg7rem flex flex-col flex-wrap content-center w-full'>

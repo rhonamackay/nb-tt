@@ -1,5 +1,5 @@
 import React from 'react'
-import DateAndTime from './DateAndTime'
+import DateAndTime from '../DateAndTime/DateAndTime'
 
 
 function Title() {
