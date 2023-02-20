@@ -1,9 +1,9 @@
-import React from 'react'
-import ShowDisplay from './ShowDisplay'
+import React from "react";
+import ShowDisplay from "./ShowDisplay";
 
-describe('<ShowDisplay />', () => {
-  it('renders', () => {
+describe("<ShowDisplay />", () => {
+  it("renders", () => {
     // see: https://on.cypress.io/mounting-react
-    cy.mount(<ShowDisplay />)
-  })
-})
+    cy.mount(<ShowDisplay />);
+  });
+});

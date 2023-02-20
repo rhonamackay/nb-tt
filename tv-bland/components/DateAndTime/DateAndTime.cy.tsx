@@ -1,9 +1,9 @@
-import React from 'react'
-import DateAndTime from './DateAndTime'
+import React from "react";
+import DateAndTime from "./DateAndTime";
 
-describe('<DateAndTime />', () => {
-  it('renders', () => {
+describe("<DateAndTime />", () => {
+  it("renders", () => {
     // see: https://on.cypress.io/mounting-react
-    cy.mount(<DateAndTime />)
-  })
-})
+    cy.mount(<DateAndTime />);
+  });
+});

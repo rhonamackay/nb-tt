@@ -1,9 +1,9 @@
-import React from 'react'
-import ShowPgHeader from './ShowPgHeader'
+import React from "react";
+import ShowPgHeader from "./ShowPgHeader";
 
-describe('<ShowPgHeader />', () => {
-  it('renders', () => {
+describe("<ShowPgHeader />", () => {
+  it("renders", () => {
     // see: https://on.cypress.io/mounting-react
-    cy.mount(<ShowPgHeader />)
-  })
-})
+    cy.mount(<ShowPgHeader />);
+  });
+});

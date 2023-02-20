@@ -1,30 +1,28 @@
-import React from 'react'
-import InfoTable from './InfoTable'
+import React from "react";
+import InfoTable from "./InfoTable";
 
 const info = {
   network: {
-    "id": 72,
-    "name": "Syndication",
-    "country": {
-        "name": "United States",
-        "code": "US",
-        "timezone": "America/New_York"
+    id: 72,
+    name: "Syndication",
+    country: {
+      name: "United States",
+      code: "US",
+      timezone: "America/New_York",
     },
-    "officialSite": undefined
-},
+    officialSite: undefined,
+  },
   schedule: {
-    "time": "12:00",
-    "days": [
-        "Monday"
-    ]
+    time: "12:00",
+    days: ["Monday"],
   },
   status: "Running",
-  genres: "Game Show"
-}
+  genres: "Game Show",
+};
 
-describe('<InfoTable />', () => {
-  it('renders', () => {
+describe("<InfoTable />", () => {
+  it("renders", () => {
     // see: https://on.cypress.io/mounting-react
-    cy.mount(<InfoTable info={info} />)
-  })
-})
+    cy.mount(<InfoTable info={info} />);
+  });
+});

@@ -1,9 +1,9 @@
-import React from 'react'
-import Subheader from './Subheader'
+import React from "react";
+import Subheader from "./Subheader";
 
-describe('<Subheader />', () => {
-  it('renders', () => {
+describe("<Subheader />", () => {
+  it("renders", () => {
     // see: https://on.cypress.io/mounting-react
-    cy.mount(<Subheader />)
-  })
-})
+    cy.mount(<Subheader />);
+  });
+});

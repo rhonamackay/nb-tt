@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Footer() {
-  return (
-    <div className="h-1/6 bg-black bottom-0 w-full mt-5">Footer</div>
-  )
+  return <div className="h-1/6 bg-black bottom-0 w-full mt-5">Footer</div>;
 }
 
-export default Footer
+export default Footer;
