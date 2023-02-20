@@ -4,6 +4,7 @@ import { individualShowDataType } from '@/types'
 import React, { useEffect, useState } from 'react'
 import ShowPgHeader from '@/components/ShowPgHeader/ShowPgHeader'
 import ShowProfile from '@/components/ShowProfile/ShowProfile'
+import {decode} from 'html-entities';
 
 type showPagePropsType = {
   show: individualShowDataType
@@ -31,7 +32,8 @@ function page({ show }: showPagePropsType) {
   const [summary, setSummary] = useState('No show summary found')
   useEffect(() => {
     if (show.summary !== null) {
-      setSummary(show.summary.replace( /(<([^>]+)>)/ig, ''))
+      const noHE = decode(show.summary)
+      setSummary(noHE.replace( /(<([^>]+)>)/ig, ''))
     }
   }, [])
 
