@@ -30,6 +30,7 @@ function ShowProfile({ info }: ShowProfilePropsType) {
             alt={title}
             width={128}
             height={192}
+            priority
             className="h-48 w-32 border-4 border-green mx-5 md:mx-0"/> : <div className="bg-green h-48 w-32 text-black p-3 px-5 md:px-0 mx-5 md:mx-0">No image found</div>}
         <div className='flex flex-col'>
             {rating ? <div data-cy="rating" className="px-5 md:px-0">
