@@ -59,7 +59,7 @@ Start the server
 ```bash
   npm run dev
 ```
-
+Visit http://localhost:3000/ on your browser
 
 ## Running Tests
 

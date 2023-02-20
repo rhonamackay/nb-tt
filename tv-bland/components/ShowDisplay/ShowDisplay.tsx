@@ -7,7 +7,7 @@ function ShowDisplay() {
   const [displayedShows, setDisplayedShows] = useState<ShowType[]>([])
   const [pagesArr, setpagesArr] = useState<number[]>([])
   const [currentPage, setCurrentPage] = useState(1)
-
+  const [loading, setLoading] = useState(true)
   
   useEffect(() => {
     async function getSchedule() {
@@ -27,6 +27,7 @@ function ShowDisplay() {
         }
       })
       setScheduledShows(showDataNoDups)
+      setLoading(false)
     }
     getSchedule()
   }, [])
@@ -59,7 +60,8 @@ function ShowDisplay() {
     <div className='h-5/6 sm:px-36 md:mt-neg7rem flex flex-col flex-wrap content-center w-full'>
         <h2 className='text-green text-2xl mb-2.5 px-5 max-w-screen-lg'>Shows coming up</h2>
         <div className="w-full flex flex-row flex-wrap gap-3 items-stretch justify-evenly mb-5 px-5 max-w-screen-lg">
-            {displayedShows.length > 0 ? displayedShows.map((show, index) => <Card key={index} id={show.id} title={show.name} img={show.image ? show.image.medium : 'placeholder'} rating={show.rating}/>) : <h2>Sorry, I couldn&apos;t find any shows for you</h2>}
+            {displayedShows.length > 0 ? displayedShows.map((show, index) => <Card key={index} id={show.id} title={show.name} img={show.image ? show.image.medium : 'placeholder'} rating={show.rating}/>) : null}
+            {loading === false && displayedShows.length === 0 ? <h2>Sorry, I couldn&apos;t find any shows for you</h2> : null}
         </div>
         <div className="flex flex-row justify-center gap-3 underline text-xl">
           {pagesArr.length > 0 ? pagesArr.map((page) => {

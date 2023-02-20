@@ -11,16 +11,13 @@ MVP:
 
 Bugs to fix: 
 - fix height bug in starring table where height is too much if only one star
-- if there is no info on case display that in starring table
-
-Extra features: 
-- loading spinner on first page load
+- if there is no info on case display that in starring table DONE
 
 Nice to have: 
 - graphql wrapper for rest api
 - performance optimisation
 - responsive images
-- unit tests for components using Cypress
+- unit tests for components using Cypress DONE
 - select different 'channels' for different countries
 
 
