@@ -29,6 +29,8 @@ My design was inspired by the retro look of Teletext and Ceefax. I used Google f
     ff00ff magenta
     00ffff cyan
     ffffff white
+ 
+All text and background colour contrast ratios meet accessibility standards. 
 
 ### Responsive design 
 The project has a responsive design which performs well on a variety of devices. End to end testing covers desktop and mobile devices. 
