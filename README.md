@@ -85,3 +85,5 @@ There are a number of improvements I would make to my MVP with more time.
 - Image size responsivity
 
 - The option to choose TV schedule information based on different countries (currently defaults to US)
+
+- More detailed component testing covering edge cases and errors
