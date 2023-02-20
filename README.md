@@ -80,8 +80,10 @@ There are a number of improvements I would make to my MVP with more time.
     - TVMaze's REST API end points return a significant ammount of information that the website does not need. 
     - Wrapping the REST API in a GraphQL server would allow for flexible requests that fetch only the data needed by the page, inclreasing efficiency and optimisation. 
     - I plan to do this using Next.js's API routes in /pages/api. The API routes are bundled on the server-side, so it would not increase the client-side bundle. 
-    - I considered including this in my MVP (you can see a test file in the page/api folder). However, as I have not worked with GraphQL APIs before, after some research I decided not to prioritise it for version 1.0 as trade off of time to research, plan and build a high-quality GraphQL wrapper was too much.
+    - I considered including this in my MVP (you can see a test file in the page/api folder). However, as I have not worked with GraphQL APIs before, after some research I decided not to prioritise it for version 1.0 as the trade off of time to research, plan and build was too great.
 
 - Image size responsivity
 
 - The option to choose TV schedule information based on different countries (currently defaults to US)
+
+- More detailed component testing covering edge cases and errors
